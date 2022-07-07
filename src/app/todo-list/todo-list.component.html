@@ -1,0 +1,12 @@
+<div>
+    <input type="text" placeholder="digite sua tarefa" [formControl]="values">
+    <button (click)="createTask()">Criar tarefa</button>
+</div>
+
+<div>
+    tarefas:
+    <ol *ngFor="let tarefa of tarefas">
+        <span>{{tarefa.name}}</span>
+        <button (click)="deleteTask(tarefa.name)">Excluir</button>
+    </ol>
+</div>
